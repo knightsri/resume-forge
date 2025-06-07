@@ -1,0 +1,396 @@
+# Resume Forge .gitignore
+
+# ================================
+# API Keys and Secrets (Legacy)
+# ================================
+# Note: Current Cline-based approach doesn't use api.key files
+# These entries are kept for backward compatibility
+api.key
+*.key
+.env
+.env.local
+.env.*.local
+.anthropic-key
+claude-api-key
+
+# ================================
+# Generated Career Data
+# ================================
+# Keep structure but ignore actual data for privacy
+extracted_data/*.json
+!extracted_data/.gitkeep
+!extracted_data/README.md
+
+# Generated applications (contain personal info)
+applications/*/*
+!applications/.gitkeep
+!applications/README.md
+
+# Generated LinkedIn profiles (contain personal info)
+linkedin_profiles/*.md
+!linkedin_profiles/.gitkeep
+!linkedin_profiles/README.md
+
+# ================================
+# Personal Career Documents
+# ================================
+# Ignore all career documents in root (privacy protection)
+# Users should add their own documents locally
+*.pdf
+*.docx
+*.doc
+*.txt
+*.md
+*.rtf
+
+# BUT preserve example and template files
+!examples/**
+!templates/**
+!docs/**
+!prompts/**
+!README.md
+!CONTRIBUTING.md
+!LICENSE
+!.github/**
+
+# ================================
+# Processing Logs and Temp Files
+# ================================
+*.log
+logs/
+error.log
+processing.log
+debug.log
+api-usage.log
+
+# Temporary processing files
+tmp/
+temp/
+cache/
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Checkpoint and state files
+checkpoint_*.json
+state_*.json
+progress_*.json
+
+# ================================
+# Python/Development Environment
+# ================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# ================================
+# IDE and Editor Files
+# ================================
+# VSCode
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/tasks.json
+!.vscode/recommended-extensions.json
+
+# IntelliJ/PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+\#*\#
+.\#*
+
+# ================================
+# Operating System Files
+# ================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# Archive and Compressed Files
+# ================================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ================================
+# Database Files
+# ================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ================================
+# Package Manager Files
+# ================================
+# npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Package-lock files
+package-lock.json
+yarn.lock
+
+# ================================
+# CI/CD and Testing
+# ================================
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ================================
+# Documentation Build Files
+# ================================
+# Sphinx documentation
+docs/_build/
+docs/build/
+site/
+
+# ================================
+# Backup and Recovery Files
+# ================================
+*.orig
+*.bak
+*.backup
+*~
+.recovery
+.swp
+
+# ================================
+# Custom Resume Forge Ignores
+# ================================
+# Large batch processing folders
+batch*/
+batches/
+processing/
+archive/
+
+# Custom user configurations
+config.local.*
+settings.local.*
+preferences.json
+
+# Performance and analytics data
+metrics/
+analytics/
+performance/
+stats/
+
+# User-specific scripts
+scripts/custom_*
+scripts/user_*
+scripts/local_*
+
+# ================================
+# Security and Compliance
+# ================================
+# SSL/TLS certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# SSH keys
+id_rsa
+id_dsa
+id_ed25519
+id_ecdsa
+*.pub
+
+# GPG keys
+*.asc
+*.gpg
+secring.*
+
+# ================================
+# Large Files and Media
+# ================================
+# Video files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Audio files
+*.mp3
+*.wav
+*.flac
+*.aac
+
+# Image files (large)
+*.tiff
+*.tif
+*.bmp
+*.psd
+
+# Keep small images for documentation
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.svg
+!*.ico
+
+# ================================
+# Version Control
+# ================================
+# Git
+.git/
+*.patch
+*.diff
+
+# Mercurial
+.hg/
+.hgignore
+.hgtags
+
+# SVN
+.svn/
+
+# ================================
+# Local Development Overrides
+# ================================
+# Allow local gitignore additions
+.gitignore.local
+
+# Allow personal notes (not committed)
+NOTES.md
+TODO.personal.md
+notes/
+personal/

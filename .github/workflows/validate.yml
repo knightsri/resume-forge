@@ -1,0 +1,132 @@
+name: Validate Project Structure
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Validate project structure
+      run: |
+        echo "🔍 Validating Resume Forge project structure..."
+        
+        # Check required directories exist
+        directories=("docs" "prompts" "examples" "templates" "scripts" "extracted_data" "opportunities" "applications" "linkedin_profiles")
+        
+        for dir in "${directories[@]}"; do
+          if [ ! -d "$dir" ]; then
+            echo "❌ Missing required directory: $dir"
+            exit 1
+          else
+            echo "✅ Directory exists: $dir"
+          fi
+        done
+        
+        # Check required files exist
+        files=("README.md" "LICENSE" "CONTRIBUTING.md" ".gitignore")
+        
+        for file in "${files[@]}"; do
+          if [ ! -f "$file" ]; then
+            echo "❌ Missing required file: $file"
+            exit 1
+          else
+            echo "✅ File exists: $file"
+          fi
+        done
+        
+        # Check scripts are executable
+        scripts=("scripts/setup.sh")
+        
+        for script in "${scripts[@]}"; do
+          if [ ! -f "$script" ]; then
+            echo "⚠️ Script not found: $script"
+          elif [ ! -x "$script" ]; then
+            echo "⚠️ Script not executable: $script"
+          else
+            echo "✅ Script ready: $script"
+          fi
+        done
+        
+        echo "🎉 Project structure validation complete!"
+    
+    - name: Validate documentation links
+      run: |
+        echo "🔗 Checking documentation links..."
+        
+        # Check that referenced files exist
+        if [ -f "README.md" ]; then
+          # Check if getting-started.md is referenced and exists
+          if grep -q "getting-started.md" README.md; then
+            if [ ! -f "docs/getting-started.md" ]; then
+              echo "❌ README references docs/getting-started.md but file doesn't exist"
+              exit 1
+            else
+              echo "✅ getting-started.md link valid"
+            fi
+          fi
+          
+          # Check if troubleshooting.md is referenced and exists  
+          if grep -q "troubleshooting.md" README.md; then
+            if [ ! -f "docs/troubleshooting.md" ]; then
+              echo "❌ README references docs/troubleshooting.md but file doesn't exist"
+              exit 1
+            else
+              echo "✅ troubleshooting.md link valid"
+            fi
+          fi
+        fi
+        
+        echo "✅ Documentation links validated!"
+    
+    - name: Validate prompt files
+      run: |
+        echo "📋 Validating prompt files..."
+        
+        # Check that all expected prompts exist
+        prompts=("Prompt0_System_Verification.md" "Prompt1_Initial_Setup.md" "Prompt2_Comprehensive_Extraction.md" "Prompt3_Quality_Enhancements.md" "Prompt4_Generate_Summary.md" "Prompt5_Interactive_Cleanup.md" "Prompt6_Targeted_Application_Generator.md" "Prompt7_LinkedIn_Profile_Generator.md")
+        
+        for prompt in "${prompts[@]}"; do
+          if [ ! -f "prompts/$prompt" ]; then
+            echo "⚠️ Expected prompt file missing: prompts/$prompt"
+          else
+            echo "✅ Prompt exists: $prompt"
+          fi
+        done
+        
+        # Check that prompt files have content
+        for file in prompts/*.md; do
+          if [ -f "$file" ]; then
+            if [ ! -s "$file" ]; then
+              echo "⚠️ Empty prompt file: $file"
+            elif [ $(wc -l < "$file") -lt 10 ]; then
+              echo "⚠️ Very short prompt file: $file ($(wc -l < "$file") lines)"
+            else
+              echo "✅ Prompt has content: $(basename "$file")"
+            fi
+          fi
+        done
+        
+        echo "✅ Prompt validation complete!"
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Run markdown lint
+      uses: articulate/actions-markdownlint@v1
+      with:
+        config: .markdownlint.json
+        files: '**/*.md'
+        ignore: 'node_modules'
+      continue-on-error: true
