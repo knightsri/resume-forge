@@ -12,7 +12,55 @@ Before you begin, ensure you have:
 - **Python 3.8+** (optional, for enhanced features)
 - **Your career documents** (resumes, cover letters, CVs in any format)
 
-## 🏗️ Step 1: Project Setup
+## 🏗️ Step 1: Create GitHub Repository
+
+### Option A: Use This as a Template (Recommended)
+1. **Go to the Resume Forge repository** on GitHub
+2. **Click "Use this template"** button (green button)
+3. **Create your repository**:
+   - Repository name: `resume-forge` (or your preferred name)
+   - Description: "AI-powered career document analysis and targeting system"
+   - Choose Public or Private (Private recommended for personal use)
+4. **Clone your new repository**:
+   ```bash
+   git clone https://github.com/knightsri/resume-forge.git
+   cd resume-forge
+   ```
+
+### Option C: Connect Existing Local Files (Your Situation)
+If you already have Resume Forge files locally and just created an empty GitHub repository:
+
+1. **Navigate to your existing Resume Forge folder**:
+   ```bash
+   cd /path/to/your/resume-forge-folder
+   ```
+
+2. **Initialize git and connect to your repository**:
+   ```bash
+   # Initialize git (if not already done)
+   git init
+   
+   # Add your GitHub repository as remote
+   git remote add origin https://github.com/knightsri/resume-forge.git
+   
+   # Add all files
+   git add .
+   
+   # Make initial commit
+   git commit -m "🔥 Initial commit: Resume Forge setup"
+   
+   # Push to GitHub
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. **Verify connection**:
+   ```bash
+   git remote -v
+   # Should show your GitHub repository URL
+   ```
+
+## 🏗️ Step 2: Local Setup
 
 ### Clone and Initialize
 ```bash
@@ -42,7 +90,7 @@ mkdir -p {docs,prompts,examples,templates,scripts,extracted_data,opportunities,a
 # (Keep them in the root directory alongside the prompts folder)
 ```
 
-## 📁 Step 2: Organize Your Documents
+## 📁 Step 3: Organize Your Documents
 
 ### Document Preparation
 1. **Collect all career documents** from various locations:
@@ -52,23 +100,53 @@ mkdir -p {docs,prompts,examples,templates,scripts,extracted_data,opportunities,a
    - LinkedIn profile exports
    - Any career-related documents
 
-2. **Place them in the main project folder**:
+2. **Place them in the mydocs/ folder**:
    ```
    resume-forge/
-   ├── Resume_2023_Software_Engineer.docx
-   ├── Resume_2022_Manager_Role.pdf
-   ├── Cover_Letter_Tech_Company.txt
-   ├── CV_Academic_2021.pdf
-   ├── LinkedIn_Profile_Export.md
-   └── ... (all your career documents)
+   ├── mydocs/                                    # 🔒 Your personal documents
+   │   ├── Resume_2023_Software_Engineer.docx
+   │   ├── Resume_2022_Manager_Role.pdf
+   │   ├── Cover_Letter_Tech_Company.txt
+   │   ├── CV_Academic_2021.pdf
+   │   └── LinkedIn_Profile_Export.md
+   └── ... (rest of project structure)
    ```
 
-3. **File naming tips**:
-   - Keep original filenames (the system handles duplicates)
-   - Avoid special characters if possible
-   - Any format is supported (.pdf, .docx, .txt, .md, .doc)
+3. **Privacy protection automatically handled**:
+   - The entire `mydocs/` folder is in `.gitignore`
+   - Your personal documents will NEVER be committed to git
+   - Safe to add any career-related files
 
-## 🔧 Step 3: Configure API Access
+### File Organization Options
+You can organize however you prefer:
+
+**Option A: Organized by type**:
+```
+mydocs/
+├── resumes/
+├── cover-letters/
+└── other/
+```
+
+**Option B: Flat structure**:
+```
+mydocs/
+├── Resume_Latest.pdf
+├── CoverLetter_Template.docx
+└── CV_Complete.pdf
+```
+
+**Option C: By time period**:
+```
+mydocs/
+├── 2020-2021/
+├── 2022-2023/
+└── current/
+```
+
+The processing system will find and analyze all supported files regardless of organization.
+
+## 🔧 Step 4: Configure API Access
 
 ### Get Your Claude API Key
 1. Visit [Anthropic Console](https://console.anthropic.com/)
@@ -85,7 +163,7 @@ Your Claude API access is managed through:
 2. **Anthropic account** linked to Cline
 3. **No separate api.key file needed**
 
-## 🎯 Step 4: First Run - System Verification
+## 🎯 Step 5: First Run - System Verification
 
 Open the project in VSCode and start with system verification:
 
@@ -106,7 +184,7 @@ This verification ensures:
 - Your documents are properly organized
 - No configuration issues exist
 
-## 🔄 Step 5: Document Processing Pipeline
+## 🔄 Step 6: Document Processing Pipeline
 
 Now run the main processing pipeline in order:
 
@@ -131,7 +209,7 @@ Now run the main processing pipeline in order:
 2. **Cline creates** summary generation script
 3. **This phase produces**: `DETAILED_SUMMARY.json` for interactive cleanup
 
-## 🎨 Step 6: Interactive Cleanup
+## 🎨 Step 7: Interactive Cleanup
 
 ### Upload to Claude Web
 1. **Go to** [claude.ai](https://claude.ai) in your browser
@@ -153,7 +231,7 @@ At the end of the session:
 2. **Save it as** `extracted_data/Comprehensive_Resume.json`
 3. **This file is used** for all future targeted applications
 
-## 🎯 Step 7: Generate Targeted Applications
+## 🎯 Step 8: Generate Targeted Applications
 
 ### Create Job Opportunities
 1. **Create opportunity files** in the `opportunities/` folder:
@@ -192,7 +270,7 @@ At the end of the session:
    - Content templates for ongoing posting
    - Engagement and networking strategies
 
-## 📊 Step 8: Review and Refine
+## 📊 Step 9: Review and Refine
 
 ### Quality Check Your Outputs
 Review the generated materials:
