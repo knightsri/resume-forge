@@ -13,6 +13,7 @@ echo "📌 Creating .gitkeep files..."
 touch opportunities/.gitkeep
 touch examples/.gitkeep
 touch templates/.gitkeep
+touch extracted_data/.gitkeep
 
 # Create mydocs README only if missing
 if [ ! -f "mydocs/README.md" ]; then

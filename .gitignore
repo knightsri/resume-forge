@@ -17,7 +17,11 @@ claude-api-key
 # Generated Career Data
 # ================================
 # Keep structure but ignore actual data for privacy
-extracted_data/
+extracted_data/*
+!extracted_data/.gitkeep
+!extracted_data/README.md
+
+# Generated applications (contain personal info)
 applications/*/*
 !applications/.gitkeep
 !applications/README.md
@@ -33,11 +37,6 @@ linkedin_profiles/*.md
 # Complete folder exclusion for maximum privacy protection
 mydocs/
 !mydocs/README.md
-
-# Generated Data (Complete privacy protection)  
-extracted_data/
-applications/
-linkedin_profiles/
 
 # ================================
 # Legacy Personal Documents Protection  
