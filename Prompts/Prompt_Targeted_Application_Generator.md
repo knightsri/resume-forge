@@ -2,17 +2,18 @@
 
 Create a script that takes your comprehensive career data and generates targeted resumes and cover letters for specific job opportunities.
 
-## Input Requirements:
+## Input Requirements
 
 1. **Comprehensive Resume Data**: `extracted_data/Comprehensive_Resume.json` (from WebPrompt_Cleanup.md)
 2. **Job Opportunity Files**: Place in `opportunities/` folder with format:
    - `opportunity_<company-name>_<role-name>.md` or `.txt`
    - Example: `opportunity_Microsoft_Senior_Engineering_Manager.md`
 
-## Job Opportunity File Format:
+## Job Opportunity File Format 
+
 Each opportunity file should contain:
 
-```
+```markdown
 Company: [Company Name]
 Role: [Position Title]
 Application Deadline: [Date if known]
@@ -28,7 +29,7 @@ Personal Notes:
 [Connections at company, referrals, specific interests, etc.]
 ```
 
-## Script Requirements:
+## Script Requirements
 
 Please create a Python script that:
 
@@ -44,10 +45,11 @@ Please create a Python script that:
    - `cover_letter_[company]_[role].md`
    - `application_checklist_[company]_[role].md`
 
-## Targeted Resume Generation Prompt:
+## Targeted Resume Generation Prompt
 
 Use this prompt with Claude API for resume generation:
-```
+
+```markdown
 You are creating a targeted resume for a specific job opportunity. Analyze the job description and comprehensive career data to create a focused, relevant resume.
 
 JOB OPPORTUNITY:
@@ -82,11 +84,11 @@ OUTPUT FORMAT: Professional markdown resume with:
 Include brief comments explaining positioning choices.
 ```
 
-## Cover Letter Generation Prompt:
+## Cover Letter Generation Prompt
 
 Use this prompt with Claude API for cover letter generation:
 
-```
+```markdown
 You are creating a targeted cover letter for a specific job opportunity. Analyze the job description and career data to create a compelling, personalized cover letter.
 
 JOB OPPORTUNITY:
@@ -129,7 +131,7 @@ Include [PLACEHOLDER] sections for:
 Include brief comments explaining positioning and customization choices.
 ```
 
-## Application Checklist Generation:
+## Application Checklist Generation
 
 Create a checklist file for each application with:
 
@@ -164,10 +166,10 @@ Create a checklist file for each application with:
 - Recent company news: [PLACEHOLDER]
 - Team you'd be joining: [PLACEHOLDER]
 - Interview process: [PLACEHOLDER]
-```
 
-#### Script Features:
-```
+## Script Features 
+
+```markdown
 Batch Processing: Process multiple opportunities at once
 Placeholder Tracking: List all placeholders that need manual completion
 Version Control: Timestamp outputs and track changes
@@ -176,8 +178,9 @@ Cover Letter Variations: Adjust tone based on company culture research
 Quality Checks: Validate that key job requirements are addressed
 ```
 
-#### Output Structure:
-```
+## Output Structure
+
+```markdown
 applications/
 ├── Microsoft_Senior_Engineering_Manager/
 │   ├── targeted_resume_Microsoft_Senior_Engineering_Manager.md
@@ -189,5 +192,3 @@ applications/
 │   └── application_checklist_Google_Technical_Lead.md
 └── 
 ```
-
-

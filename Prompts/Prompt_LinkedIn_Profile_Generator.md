@@ -2,15 +2,16 @@
 
 Create a script that takes your comprehensive career data and generates an optimized LinkedIn profile with all sections properly formatted for the platform.
 
-## Input Requirements:
+## Input Requirements
 
 1. **Comprehensive Resume Data**: `extracted_data/Comprehensive_Resume.json` (from cleanup step outlined in WebPrompt_Cleanup.md prompt)
 2. **LinkedIn Strategy File** (optional): `linkedin_strategy.md` with your positioning preferences.
 
-## LinkedIn Strategy File Format:
+## LinkedIn Strategy File Format 
+
 Create `linkedin_strategy.md` (optional) to guide profile optimization:
 
-```
+```markdown
 LinkedIn Profile Strategy
 
 Target Audience:
@@ -41,7 +42,7 @@ Content Sharing Strategy:
 [Technical posts, industry insights, leadership thoughts, etc.]
 ```
 
-## Script Requirements:
+## Script Requirements
 
 Please create a Python script that:
 
@@ -55,11 +56,11 @@ Please create a Python script that:
    - `linkedin_profile_executive.md`
    - `linkedin_optimization_checklist.md`
 
-## LinkedIn Profile Generation Prompt:
+## LinkedIn Profile Generation Prompt
 
 Use this prompt with Claude API for profile generation:
 
-```
+```markdown
 You are creating an optimized LinkedIn profile for a technology professional with my  professinoal experience timeline. Analyze the comprehensive career data and strategy to create compelling LinkedIn content.
 
 COMPREHENSIVE CAREER DATA:
@@ -70,20 +71,25 @@ LINKEDIN STRATEGY:
 
 TASK: Create a complete LinkedIn profile optimized for visibility, engagement, and professional positioning.
 
-## LINKEDIN PROFILE SECTIONS:
+## LINKEDIN PROFILE SECTIONS
 
 ### 1. HEADLINE (120 characters max)
+
 Create 3 variations:
+
 - **Executive Focus**: Emphasizes leadership and strategic impact
 - **Technical Focus**: Emphasizes technical expertise and innovation  
 - **Hybrid Focus**: Balances leadership and technical skills
 
 Examples:
+
 - 'Senior Engineering Leader | Cloud Architecture Expert | Building High-Performance Teams at Scale'
 - 'Technology Executive | Driving Digital Transformation | AI/ML Strategy & Implementation'
 
 ### 2. ABOUT SECTION (2,600 characters max)
+
 Structure:
+
 - **Hook** (first 2 lines visible in feed)
 - **Value proposition** and unique expertise
 - **Career highlights** with quantified achievements
@@ -92,6 +98,7 @@ Structure:
 - **Call to action** for connection
 
 Include:
+
 - Keywords for searchability
 - Personality to show authentic voice
 - Specific technologies and methodologies
@@ -99,7 +106,9 @@ Include:
 - [PLACEHOLDER] for current company positioning
 
 ### 3. EXPERIENCE SECTION
+
 For each major role, create:
+
 - **Compelling role title** (if different from actual title)
 - **Company description** (1-2 lines about the company)
 - **Role summary** focusing on impact and scope
@@ -110,7 +119,9 @@ For each major role, create:
 Prioritize most recent 10-15 years unless earlier experience adds unique value.
 
 ### 4. SKILLS SECTION
+
 Organize into categories:
+
 - **Core Technical Skills** (top 10 most relevant)
 - **Leadership & Management** 
 - **Industry Expertise**
@@ -119,7 +130,9 @@ Organize into categories:
 Include rationale for skill prioritization based on target audience.
 
 ### 5. FEATURED SECTION RECOMMENDATIONS
+
 Suggest content for Featured section:
+
 - **Key projects** with visual descriptions
 - **Published articles** or thought leadership pieces
 - **Patents** and intellectual property
@@ -127,7 +140,9 @@ Suggest content for Featured section:
 - **Company achievements** and press coverage
 
 ### 6. RECOMMENDATIONS STRATEGY
+
 Suggest who to request recommendations from:
+
 - **Former managers** (for leadership validation)
 - **Direct reports** (for management style)
 - **Peers** (for collaboration and expertise)
@@ -136,42 +151,49 @@ Suggest who to request recommendations from:
 Include template requests for each type.
 
 ### 7. ACTIVITY STRATEGY
+
 Recommend posting strategy:
+
 - **Content themes** based on expertise
 - **Posting frequency** and timing
 - **Engagement tactics** 
 - **Industry hashtags** to follow
 - **Thought leadership topics**
 
-## OPTIMIZATION ELEMENTS:
+## OPTIMIZATION ELEMENTS
 
-### Keywords Integration:
+### Keywords Integration
+
 - Industry-specific terms
 - Technology stack keywords
 - Leadership terms
 - Geographic relevance
 - Seniority level indicators
 
-### Engagement Optimization:
+### Engagement Optimization
+
 - Questions to encourage comments
 - Industry insights and opinions
 - Behind-the-scenes content
 - Team achievements and shout-outs
 - Lessons learned and advice
 
-### Visual Recommendations:
+### Visual Recommendations
+
 - Professional headshot guidelines
 - Background banner suggestions
 - Featured section visuals
 - Company logo considerations
 
-### Privacy & Professional Settings:
+### Privacy & Professional Settings
+
 - Open to work settings
 - Contact information display
 - Activity visibility preferences
 - Connection acceptance strategy
 
 Include [PLACEHOLDER] sections for:
+
 - Current employment status decisions
 - Salary/compensation visibility
 - Geographic preferences updates
@@ -179,7 +201,7 @@ Include [PLACEHOLDER] sections for:
 - Personal brand evolution plans
 ```
 
-## LinkedIn Content Templates:
+## LinkedIn Content Templates
 
 Generate additional files for ongoing LinkedIn success:
 
@@ -226,20 +248,16 @@ Grateful to work with such an incredible team: [PLACEHOLDER: Team members to tag
 
 #TeamWork #Innovation #[RelevantTech]"
 
-### Industry Commentary Post:
+### Industry Commentary Post: 
 "📊 [Industry trend/news] has me thinking about [your perspective].
 
 Based on my experience with [relevant background], I see three key implications:
 
 1️⃣ [Implication 1]
 2️⃣ [Implication 2] 
-3️⃣ [Implication 3]
+3️⃣ [Implication 3] 
 
 How are you and your teams preparing for this shift?
 
 #IndustryTrends #TechnologyStrategy #FutureOfWork
 ```
-
-
-
-

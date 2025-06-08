@@ -157,7 +157,7 @@ if [ ! -f ".git/hooks/pre-commit" ]; then
 echo "🔍 Checking for personal data in commit..."
 
 # Check for personal document files
-personal_files=$(git diff --cached --name-only | grep -E "\.(pdf|docx|doc|txt|md)$" | grep -v -E "(examples|templates|docs|prompts|README|CONTRIBUTING|LICENSE)")
+personal_files=$(git diff --cached --name-only | grep -E "\.(pdf|docx|doc|txt|md)$" | grep -v -E "(examples|templates|docs|[Pp]rompts|README|CONTRIBUTING|LICENSE|\.github)")
 
 if [ ! -z "$personal_files" ]; then
     echo ""

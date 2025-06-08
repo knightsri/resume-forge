@@ -4,7 +4,7 @@ Enhance the extraction script from Phases 1-2 with production-ready features:
 
 ## Script Enhancement Prompt
 
-```
+```markdown
 Please enhance the extraction script with the following production-ready features:
 
 1. **Robust Error Handling**:

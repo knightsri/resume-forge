@@ -4,7 +4,8 @@ Now add the comprehensive extraction prompts to the script created in Phase 1.
 
 Please integrate TWO different extraction prompts based on document type detection:
 
-## DOCUMENT TYPE DETECTION PROMPT:
+## DOCUMENT TYPE DETECTION PROMPT 
+
 First, analyze the document to determine its type using this prompt:
 
 "Analyze this document and determine if it's primarily a RESUME/CV or a COVER LETTER based on structure and content.
@@ -16,12 +17,11 @@ Content preview: {first_1000_chars}
 
 Return only: 'RESUME' or 'COVER_LETTER'"
 
-
-## COMPREHENSIVE RESUME EXTRACTION PROMPT:
+## COMPREHENSIVE RESUME EXTRACTION PROMPT
 
 For documents identified as resumes, use this extraction (captures EVERYTHING):
 
-```
+```markdown
 You are analyzing a RESUME/CV file to extract comprehensive career data. Your goal is to capture EVERY piece of information - err on the side of capturing MORE rather than less.
 
 CRITICAL INSTRUCTIONS:
@@ -254,11 +254,11 @@ TASK: Extract and structure ALL information from this resume. Return a JSON obje
 }
 ```
 
-## COMPREHENSIVE COVER LETTER EXTRACTION PROMPT:
+## COMPREHENSIVE COVER LETTER EXTRACTION PROMPT
 
 For documents identified as cover letters, use this specialized extraction:
 
-```
+```markdown
 You are analyzing a COVER LETTER to extract career insights and contextual information. Your goal is to capture EVERY piece of information - err on the side of capturing MORE rather than less.
 
 CRITICAL INSTRUCTIONS:
@@ -400,7 +400,6 @@ Return ONLY the JSON object, no other text.
 ```
 
 ---
-
 
 Integrate both prompts into the script with automatic document type detection and ensure robust error handling for both extraction types.
 

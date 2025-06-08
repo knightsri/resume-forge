@@ -1,12 +1,14 @@
 # Interactive Cleanup Session
 
+This is the comprehensive interactive cleanup session that transforms your raw extracted data into a polished, strategic career profile ready for targeted applications and LinkedIn optimization.
+
 Use this prompt in Claude web interface (claude.ai) after uploading DETAILED_SUMMARY.json:
 
 ---
 
-## Session Prompt
+## Session Prompt 
 
-```
+````markdown
 # COMPREHENSIVE CAREER DATA CLEANUP & CONSOLIDATION SESSION
 
 I've processed my career document collection (resumes and cover letters) spanning my professional experience using automated extraction with comprehensive data capture. I have attached a DETAILED_SUMMARY.json file containing all organized career data that needs intelligent cleanup and consolidation.
@@ -104,53 +106,56 @@ The attached file contains exhaustively categorized career information including
 
 ### 1. Clean Consolidated JSON (Comprehensive_Resume.json)
 Structure the final clean data as:
-```json
-{
-  "metadata": {
-    "cleaned_date": "timestamp",
-    "source_documents_count": "number",
-    "career_span_years": "number",
-    "data_quality_score": "assessment"
-  },
-  "personal_information": {
-    "primary_contact": {...},
-    "professional_profiles": {...}
-  },
-  "professional_summary": "executive summary paragraph",
-  "core_competencies": ["key skills organized by relevance"],
-  "work_experience": [
-    {
-      "company": "company name",
-      "positions": [clean consolidated positions],
-      "timeline": "clean date range",
-      "key_achievements": [quantified achievements],
-      "technologies": [relevant tech stack],
-      "impact": "business impact summary"
-    }
-  ],
-  "education": [clean education entries],
-  "certifications": [current relevant certifications],
-  "patents_publications": [intellectual property],
-  "awards_recognition": [significant awards],
-  "key_projects": [major project portfolio],
-  "leadership_progression": "career advancement summary",
-  "skill_evolution": "technology skill development over time"
-}
-```
+  ```json
+  {
+    "metadata": {
+      "cleaned_date": "timestamp",
+      "source_documents_count": "number",
+      "career_span_years": "number",
+      "data_quality_score": "assessment"
+    },
+    "personal_information": {
+      "primary_contact": {...},
+      "professional_profiles": {...}
+    },
+    "professional_summary": "executive summary paragraph",
+    "core_competencies": ["key skills organized by relevance"],
+    "work_experience": [
+      {
+        "company": "company name",
+        "positions": [clean consolidated positions],
+        "timeline": "clean date range",
+        "key_achievements": [quantified achievements],
+        "technologies": [relevant tech stack],
+        "impact": "business impact summary"
+      }
+    ],
+    "education": [clean education entries],
+    "certifications": [current relevant certifications],
+    "patents_publications": [intellectual property],
+    "awards_recognition": [significant awards],
+    "key_projects": [major project portfolio],
+    "leadership_progression": "career advancement summary",
+    "skill_evolution": "technology skill development over time"
+  }
+  ```
 
 ### 2. Executive Markdown Resume
+
 - Professional resume optimized for senior leadership roles
 - Emphasis on leadership progression and business impact
 - Quantified achievements and technology evolution
 - Clean, executive-level formatting
 
 ### 3. Career Analysis Report
+
 - Timeline analysis showing progression patterns
 - Skills evolution mapping
 - Achievement categorization and impact assessment
 - Recommendations for positioning and emphasis
 
-## Session Flow:
+## Session Flow
+
 1. **You analyze** the attached file and provide assessment
 2. **You ask questions** about my priorities and any immediate conflicts you notice
 3. **We work together** systematically through each data category
@@ -158,11 +163,8 @@ Structure the final clean data as:
 5. **You generate** final clean outputs optimized for my career goals
 
 ## Important: Saving Final Output
+
 At the end of our session, please provide the final clean Comprehensive_Resume.json in a format I can easily copy and save to `extracted_data/Comprehensive_Resume.json` for use in subsequent targeted application generation and LinkedIn optimization.
 
 Let's begin with your analysis of the attached DETAILED_SUMMARY.json file. What are the biggest consolidation challenges you identify, and what questions do you have for me to guide this cleanup process effectively?
-```
-
----
-
-This is the comprehensive interactive cleanup session that transforms your raw extracted data into a polished, strategic career profile ready for targeted applications and LinkedIn optimization.
+````

@@ -1,15 +1,9 @@
-# Phase 4: Generate DETAILED_SUMMARY.json
+# Phase 4: Generate Comprehensive DETAILED_SUMMARY.json
 
-Create a comprehensive data consolidation script that transforms RAW_DATA.json into DETAILED_SUMMARY.json.
-
----
-
-## Phase 4: Generate Comprehensive DETAILED_SUMMARY.json
-
-```
 After all extractions are complete in RAW_DATA.json, create a comprehensive data consolidation script that transforms raw extractions into a clean, analysis-ready format. This script should prioritize capturing MORE information rather than less.
 
-CRITICAL REQUIREMENTS:
+## CRITICAL REQUIREMENTS
+
 1. **Preserve EVERYTHING** - Do not summarize, skip, or lose any details
 2. **Group similar data** for easy duplicate identification during manual cleanup
 3. **Maintain all variations** of similar information for comparison
@@ -19,12 +13,14 @@ CRITICAL REQUIREMENTS:
 
 The script should:
 
+```markdown
 1. **Read and analyze RAW_DATA.json completely**
 2. **Extract every piece of career information** regardless of source document
 3. **Group similar items together** while preserving all variations
 4. **Cross-reference information** between resumes and cover letters
 5. **Identify potential data quality issues** for manual review
 6. **Create comprehensive categorized output** optimized for cleanup
+```
 
 Output DETAILED_SUMMARY.json with this exhaustive structure:
 
@@ -612,36 +608,16 @@ Output DETAILED_SUMMARY.json with this exhaustive structure:
 }
 ```
 
-This script should create the most comprehensive possible summary while organizing everything for efficient manual review and cleanup. The goal is to lose NO information while making it easy to identify and resolve duplicates, conflicts, and gaps.
-
-Save as `extracted_data/DETAILED_SUMMARY.json` - ready for interactive Claude cleanup session.
-```_span": "total years",
-    "employment_gaps": ["identified gaps"],
-    "progression_pattern": "career advancement pattern",
-    "major_transitions": ["significant career changes"]
-  },
-  
-  "data_quality_notes": {
-    "potential_duplicates": ["items that might be duplicates"],
-    "date_inconsistencies": ["conflicting dates found"],
-    "missing_information": ["gaps that need attention"],
-    "conflicting_details": ["contradictory information"]
-  }
-}
-```
-
 This script should:
+
+```markdown
 - **Aggregate all similar items** (same company experiences, same achievements, etc.)
 - **Preserve all variations** for duplicate detection
 - **Group logically** for easier manual review
 - **Flag potential issues** for attention during cleanup
 - **Remove all filename references** - focus purely on content
-
-
 ```
 
----
-
-This script should create the most comprehensive possible summary while organizing everything for efficient manual review and cleanup.
+And create the most comprehensive possible summary while organizing everything for efficient manual review and cleanup.
 
 Save as `extracted_data/DETAILED_SUMMARY.json` - ready for interactive Claude cleanup session.

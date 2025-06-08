@@ -3,13 +3,13 @@
 We have a collection of mixed career documents including BOTH resumes AND cover letters in various formats (.md, .txt, .doc, .docx, .pdf). These documents span my entire career and provide different perspectives on my career:
 
 - **Resumes**: Structured career data, skills, achievements
-- **Cover letters**: Context, motivations, specific opportunity focus, storytelling
+- **Cover letters**: Context, motivations, specific opportunity focus, storytelling 
 
 I want to extract ALL information from each unique file (eliminating duplicates upfront) and store it in a single JSON file for easy management and resumability.
 
 Please create a Python script that:
 
-1. **Scans the current directory** for career documents (*.md, *.txt, *.doc, *.docx, *.pdf)
+1. **Scans the current directory** for career documents (*.md,*.txt, *.doc,*.docx, *.pdf)
    - **EXCLUDE** files containing "INSTRUCTION", "README", "ANALYZER", or "GUIDE" in filename
    - **EXCLUDE** any files in "extracted_data" or "prompts" folders
 2. **Eliminates duplicate files upfront** using SHA-256 hash comparison
@@ -26,6 +26,7 @@ Please create a Python script that:
 10. **Uses environment variable or file** for API key management
 
 JSON Structure for RAW_DATA.json:
+
 ```json
 {
   "metadata": {
