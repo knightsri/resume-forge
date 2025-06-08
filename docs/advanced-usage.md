@@ -9,6 +9,7 @@ This guide covers power user features, customization options, and advanced workf
 If you work across multiple industries or have diverse experience:
 
 #### Create Industry-Specific Summaries
+
 ```bash
 # Process documents by industry focus
 mkdir temp_healthcare temp_finance temp_tech
@@ -23,9 +24,11 @@ cp *software* *tech* temp_tech/
 ```
 
 #### Custom Targeting Strategies
+
 Create specialized opportunity templates:
 
 **Healthcare Focus** (`opportunities/template_healthcare.md`):
+
 ```markdown
 # Company: [Healthcare Organization]
 # Role: [Clinical/Administrative Role]
@@ -39,6 +42,7 @@ Create specialized opportunity templates:
 ```
 
 **Technology Focus** (`opportunities/template_tech.md`):
+
 ```markdown
 # Company: [Tech Company]
 # Role: [Engineering/Product Role]
@@ -54,6 +58,7 @@ Create specialized opportunity templates:
 ### Large Document Collections (100+ Files)
 
 #### Batch Processing Strategy
+
 ```markdown
 # Use this approach for 100+ documents:
 
@@ -69,6 +74,7 @@ Create specialized opportunity templates:
 ```
 
 #### Memory Management
+
 ```markdown
 # For very large collections:
 
@@ -86,6 +92,7 @@ Create specialized opportunity templates:
 #### Industry-Specific Prompts
 
 **Prompt8_Academic_Optimization.md**:
+
 ```markdown
 # Phase 8: Academic Career Optimization
 
@@ -107,6 +114,7 @@ For researchers, professors, and academic professionals:
 ```
 
 **Prompt9_Executive_Positioning.md**:
+
 ```markdown
 # Phase 9: Executive Leadership Positioning
 
@@ -130,6 +138,7 @@ For C-level, VP, and senior director roles:
 #### Role-Specific Templates
 
 **Startup/Entrepreneurship** (`opportunities/template_startup.md`):
+
 ```markdown
 # Company: [Startup Name]
 # Stage: [Seed/Series A/B/C/etc.]
@@ -150,6 +159,7 @@ For C-level, VP, and senior director roles:
 ### Advanced Targeting Techniques
 
 #### Multi-Role Applications
+
 Create matrix targeting for similar roles:
 
 ```markdown
@@ -165,6 +175,7 @@ roles/
 ```
 
 #### Geographic Targeting
+
 ```markdown
 # Location-Specific Customization:
 
@@ -189,6 +200,7 @@ roles/
 ### Prompt Engineering Best Practices
 
 #### Context Optimization
+
 ```markdown
 # Improve AI responses by:
 
@@ -199,6 +211,7 @@ roles/
 ```
 
 #### Response Quality Enhancement
+
 ```markdown
 # Get better extractions:
 
@@ -218,6 +231,7 @@ roles/
 ### Handling Edge Cases
 
 #### Complex Career Transitions
+
 ```markdown
 # For major career changes:
 
@@ -228,6 +242,7 @@ roles/
 ```
 
 #### International Experience
+
 ```markdown
 # For global careers:
 
@@ -238,6 +253,7 @@ roles/
 ```
 
 #### Non-Linear Careers
+
 ```markdown
 # For entrepreneurial/consulting backgrounds:
 
@@ -252,6 +268,7 @@ roles/
 ### Cline Optimization
 
 #### Conversation Management
+
 ```markdown
 # Best practices for Cline usage:
 
@@ -262,9 +279,11 @@ roles/
 ```
 
 #### Batch Processing Scripts
+
 Create helper scripts for repetitive tasks:
 
 **batch-opportunities.sh**:
+
 ```bash
 #!/bin/bash
 # Create multiple opportunity files from templates
@@ -282,6 +301,7 @@ done
 ### Integration with External Tools
 
 #### Job Board Integration
+
 ```markdown
 # Connect with job search platforms:
 
@@ -292,6 +312,7 @@ done
 ```
 
 #### ATS Optimization
+
 ```markdown
 # Applicant Tracking System optimization:
 
@@ -306,6 +327,7 @@ done
 ### Career Progression Analysis
 
 #### Skills Evolution Tracking
+
 ```markdown
 # Analyze your skill development:
 
@@ -316,6 +338,7 @@ done
 ```
 
 #### Achievement Pattern Recognition
+
 ```markdown
 # Identify your success patterns:
 
@@ -328,6 +351,7 @@ done
 ### Application Success Tracking
 
 #### Performance Metrics
+
 ```markdown
 # Track application effectiveness:
 
@@ -345,6 +369,7 @@ applications/
 ```
 
 #### A/B Testing Approaches
+
 ```markdown
 # Test different strategies:
 
@@ -359,6 +384,7 @@ applications/
 ### Planned Extensions
 
 #### Integration Opportunities
+
 ```markdown
 # Potential future integrations:
 
@@ -369,6 +395,7 @@ applications/
 ```
 
 #### AI Model Evolution
+
 ```markdown
 # Preparing for AI advances:
 
@@ -381,6 +408,7 @@ applications/
 ### Community Contributions
 
 #### Building Extensions
+
 ```markdown
 # How to contribute new features:
 
@@ -393,6 +421,7 @@ applications/
 ```
 
 #### Sharing Templates
+
 ```markdown
 # Contribute industry templates:
 
@@ -416,6 +445,7 @@ templates/
 ### Professional Brand Development
 
 #### Consistent Messaging
+
 ```markdown
 # Maintain consistency across:
 
@@ -427,6 +457,7 @@ templates/
 ```
 
 #### Thought Leadership Integration
+
 ```markdown
 # Build professional authority:
 
@@ -439,6 +470,7 @@ templates/
 ### Long-Term Career Management
 
 #### Regular Maintenance Schedule
+
 ```markdown
 # Quarterly career review process:
 
@@ -465,6 +497,9 @@ Q4: Portfolio and brand review
 
 ---
 
-**Ready to maximize Resume Forge?** Start with the customization that fits your career stage and industry focus. The modular architecture makes it easy to add exactly what you need without complexity you don't.
+**Ready to maximize Resume Forge?** 
+Start with the customization that fits your career stage and industry focus. The modular architecture makes it easy to add exactly what you need without complexity you don't.
 
-**Questions or ideas for advanced features?** Join the discussion in [GitHub Discussions](https://github.com/knightsri/resume-forge/discussions) and help shape the future of Resume Forge! 🚀
+**Questions or ideas for advanced features?** 
+Join the discussion in [GitHub Discussions](https://github.com/knightsri/resume-forge/discussions) and help shape the future of Resume Forge! 🚀
+
