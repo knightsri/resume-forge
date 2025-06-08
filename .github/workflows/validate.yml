@@ -19,7 +19,7 @@ jobs:
         echo "🔍 Validating Resume Forge project structure..."
         
         # Check required directories exist
-        directories=("docs" "prompts" "examples" "templates" "scripts" "extracted_data" "opportunities" "applications" "linkedin_profiles")
+        directories=("docs" "Prompts" "examples" "templates" "scripts" "extracted_data" "opportunities" "applications" "linkedin_profiles")
         
         for dir in "${directories[@]}"; do
           if [ ! -d "$dir" ]; then
