@@ -59,7 +59,7 @@ Create specialized opportunity templates:
 
 #### Batch Processing Strategy
 
-```markdown
+```markdown 
 # Use this approach for 100+ documents:
 
 1. **Phase 1-3**: Process in batches of 25-30 files
@@ -502,4 +502,3 @@ Start with the customization that fits your career stage and industry focus. The
 
 **Questions or ideas for advanced features?** 
 Join the discussion in [GitHub Discussions](https://github.com/knightsri/resume-forge/discussions) and help shape the future of Resume Forge! 🚀
-

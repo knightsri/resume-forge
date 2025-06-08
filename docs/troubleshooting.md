@@ -6,7 +6,8 @@ This guide covers common issues you might encounter while using Resume Forge and
 
 ### VSCode and Cline Issues
 
-#### Cline Extension Not Found
+#### Cline Extension Not Found 
+
 1. Open VSCode Extensions (Ctrl+Shift+X)
 2. Search for "Cline" or "claude-dev"
 3. Install by Saoud Rizwan
@@ -14,6 +15,7 @@ This guide covers common issues you might encounter while using Resume Forge and
 5. Open Command Palette (Ctrl+Shift+P) → "Cline: Open"
 
 #### Cline Not Responding
+
 - Check internet connection
 - Verify API key has credits
 - Restart VSCode
@@ -21,6 +23,7 @@ This guide covers common issues you might encounter while using Resume Forge and
 - Check VSCode Output panel for errors
 
 #### "Claude API Unavailable"
+
 - Check [Anthropic Status Page](https://status.anthropic.com/)
 - Wait a few minutes and retry
 - Verify your API key is active
@@ -29,6 +32,7 @@ This guide covers common issues you might encounter while using Resume Forge and
 ### File and Directory Issues
 
 #### "No Documents Found"
+
 ```bash
 # Check current directory
 pwd
@@ -41,6 +45,7 @@ mv documents/*.docx .
 ```
 
 #### "Permission Denied" Errors
+
 ```bash
 # Fix script permissions
 chmod +x setup.sh
@@ -52,6 +57,7 @@ chmod 755 opportunities/
 ```
 
 #### "File Encoding Issues"
+
 - Save files as UTF-8 encoding
 - Avoid special characters in filenames
 - Check for hidden characters or BOM markers
@@ -61,7 +67,9 @@ chmod 755 opportunities/
 ### Token Limit Errors
 
 #### "Context Length Exceeded"
+
 **Solution 1: Use Simplified Extraction**
+
 ```markdown
 # Replace Prompt2 with simplified version
 # Focus on essential data only:
@@ -72,6 +80,7 @@ chmod 755 opportunities/
 ```
 
 **Solution 2: Process in Batches**
+
 ```bash
 # Move files to separate folders
 mkdir batch1 batch2 batch3
@@ -81,11 +90,13 @@ mv *.docx batch2/
 ```
 
 **Solution 3: Use Chunked Processing**
+
 - Use Prompt2A for basic extraction
 - Use Prompt2B for enhanced details
 - Combine results with Prompt4
 
 #### "Output Truncated"
+
 - Start new Cline conversation
 - Use "Continue from where you left off" prompt
 - Break complex prompts into smaller pieces
@@ -94,18 +105,22 @@ mv *.docx batch2/
 ### Data Quality Issues
 
 #### "Duplicate Information Extracted"
+
 This is expected! The cleanup phase (Prompt5) handles deduplication:
+
 - Upload DETAILED_SUMMARY.json to Claude web
 - Use interactive cleanup to resolve duplicates
 - Make decisions about which version to keep
 
 #### "Missing Information"
+
 - Check if files were processed (look in RAW_DATA.json)
 - Verify file formats are supported
 - Check for password-protected files
 - Try re-processing specific files
 
 #### "Incorrect Document Classification"
+
 ```markdown
 # Manually specify document type in Prompt2:
 # Add this override to the extraction prompt:
@@ -119,6 +134,7 @@ This is expected! The cleanup phase (Prompt5) handles deduplication:
 ### PDF Problems
 
 #### "Cannot Extract Text from PDF"
+
 ```bash
 # Install PDF processing libraries
 pip install PyPDF2 pdfplumber
@@ -129,6 +145,7 @@ pip install pytesseract
 ```
 
 #### "Password-Protected PDF"
+
 - Remove password protection manually
 - Use PDF tools to unlock: `qpdf --password=PASSWORD input.pdf output.pdf`
 - Skip these files and note in processing log
@@ -136,6 +153,7 @@ pip install pytesseract
 ### Word Document Issues
 
 #### "Cannot Read .docx Files"
+
 ```bash
 # Install document processing libraries
 pip install python-docx mammoth
@@ -145,6 +163,7 @@ pip install python-docx mammoth
 ```
 
 #### "Formatting Lost in Extraction"
+
 - This is expected - focus on content, not formatting
 - Visual formatting will be recreated in final output
 - Check if content was extracted correctly in RAW_DATA.json
@@ -152,12 +171,14 @@ pip install python-docx mammoth
 ### Large File Issues
 
 #### "File Too Large"
+
 - Split large documents into smaller sections
 - Extract text manually and save as .txt
 - Use document compression tools
 - Process large files separately
 
 #### "Out of Memory"
+
 ```bash
 # Process in smaller batches
 # Restart Python/Cline between large files
@@ -170,12 +191,14 @@ pip install python-docx mammoth
 ### Resume Processing Stuck
 
 #### "Script Stops Responding"
+
 1. Check for error messages in console
 2. Look for infinite loops in file processing
 3. Restart Cline conversation
 4. Use simpler prompts for problematic files
 
 #### "Processing Takes Too Long"
+
 - Reduce batch size
 - Use simplified extraction prompts
 - Skip problematic files temporarily
@@ -184,12 +207,14 @@ pip install python-docx mammoth
 ### Interactive Cleanup Problems
 
 #### "Claude Web Session Expires"
+
 - Save progress frequently
 - Break cleanup into multiple sessions
 - Copy important decisions to notes
 - Resume with partial DETAILED_SUMMARY.json
 
 #### "File Upload Fails"
+
 - Check file size (Claude has upload limits)
 - Compress JSON file if very large
 - Split into smaller sections if needed
@@ -198,12 +223,14 @@ pip install python-docx mammoth
 ### Output Generation Issues
 
 #### "Generated Resume Looks Wrong"
+
 - Review Comprehensive_Resume.json for data quality
 - Check if cleanup session completed properly
 - Verify job description formatting in opportunity files
 - Regenerate with updated targeting
 
 #### "Cover Letter Too Generic"
+
 - Add more company research to opportunity files
 - Include specific job requirements in opportunity file
 - Use more detailed application strategy
@@ -214,6 +241,7 @@ pip install python-docx mammoth
 ### Debug Mode
 
 #### Enable Detailed Logging
+
 ```python
 # Add to any Python scripts:
 import logging
@@ -225,6 +253,7 @@ print(f"API Response: {response_data}")
 ```
 
 #### Check API Usage
+
 ```bash
 # Monitor API calls and costs
 # Add to extraction script:
@@ -235,12 +264,14 @@ echo "Estimated cost: $estimated_cost"
 ### Performance Optimization
 
 #### Speed Up Processing
+
 - Use faster API model if available
 - Reduce extraction detail level
 - Process files in parallel (file reading only)
 - Cache API responses for retries
 
 #### Reduce Costs
+
 - Use simplified extraction prompts
 - Process fewer files at once
 - Remove duplicate files before processing
@@ -249,6 +280,7 @@ echo "Estimated cost: $estimated_cost"
 ### Recovery Procedures
 
 #### Corrupt RAW_DATA.json
+
 ```bash
 # Backup existing file
 cp extracted_data/RAW_DATA.json extracted_data/RAW_DATA_backup.json
@@ -259,6 +291,7 @@ cp extracted_data/RAW_DATA.json extracted_data/RAW_DATA_backup.json
 ```
 
 #### Lost Progress
+
 ```bash
 # Check for backup files
 ls -la extracted_data/*.json
@@ -270,6 +303,7 @@ ls -la *.log
 ```
 
 #### System Crash During Processing
+
 ```bash
 # Check for partial outputs
 ls -la extracted_data/
@@ -294,6 +328,7 @@ grep "completed" extracted_data/RAW_DATA.json
 When reporting issues, include:
 
 #### System Information
+
 ```bash
 # Operating system and version
 uname -a  # Linux/Mac
@@ -310,12 +345,14 @@ git --version
 ```
 
 #### Error Details
+
 - Exact error message (copy/paste)
 - Which prompt/step was running
 - Number and types of files being processed
 - Screenshot of error if helpful
 
 #### File Information
+
 ```bash
 # Number and types of documents
 ls -la *.pdf *.docx *.doc *.txt *.md | wc -l
@@ -324,6 +361,7 @@ ls -la *.docx | wc -l # Word count
 ```
 
 #### Processing State
+
 ```bash
 # Check what was completed
 grep -c "completed" extracted_data/RAW_DATA.json
@@ -349,6 +387,7 @@ ls -la extracted_data/
 ### Regular Maintenance
 
 #### Keep System Updated
+
 ```bash
 # Update Cline extension in VSCode
 # Check for Resume Forge updates
@@ -359,6 +398,7 @@ pip install --upgrade -r requirements.txt
 ```
 
 #### Clean Up Old Files
+
 ```bash
 # Remove old backup files
 find . -name "*.backup" -mtime +30 -delete
@@ -374,12 +414,14 @@ mv extracted_data/old_*.json archive/
 ### Performance Monitoring
 
 #### Track Processing Times
+
 - Note how long each phase takes
 - Monitor API response times
 - Track file processing rates
 - Document optimal batch sizes
 
 #### Cost Monitoring
+
 - Track API usage and costs
 - Monitor token consumption
 - Optimize prompts for efficiency

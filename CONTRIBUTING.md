@@ -5,24 +5,28 @@ We love your input! We want to make contributing to Resume Forge as easy and tra
 ## Ways to Contribute
 
 ### 🐛 Bug Reports
+
 - Use GitHub Issues to report bugs
 - Include detailed steps to reproduce
 - Provide your system information and error messages
 - Check existing issues before creating new ones
 
 ### 💡 Feature Requests  
+
 - Open GitHub Discussions for feature ideas
 - Describe the problem you're trying to solve
 - Explain how the feature would help users
 - Consider implementation complexity
 
-### 📝 Documentation
+### 📝 Documentation 
+
 - Improve existing documentation
 - Add examples and use cases
 - Fix typos and formatting
 - Translate documentation to other languages
 
 ### 🔧 Code Contributions
+
 - Fork the repository
 - Create a feature branch from `main`
 - Make your changes with clear commit messages

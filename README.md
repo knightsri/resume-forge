@@ -10,14 +10,16 @@
 
 ## 🎯 What Resume Forge Does
 
-### Before Resume Forge:
+### Before Resume Forge 
+
 - 📁 Scattered resume files across years
 - ✏️ Manual customization for each application  
 - 🔄 Inconsistent information across documents
 - ⏰ Hours spent on each job application
 - 🤔 Forgetting key achievements and experiences
 
-### After Resume Forge:
+### After Resume Forge
+
 - 🚀 **One-time processing** of all career documents
 - 🎯 **Instant targeted resumes** for any job posting
 - 💼 **Custom cover letters** with company research
@@ -27,24 +29,28 @@
 ## ✨ Key Features
 
 ### 🤖 **AI-Powered Extraction**
+
 - Processes resumes, cover letters, CVs in any format (.pdf, .docx, .md, .txt)
 - Extracts ALL career information without losing details
 - Handles decades of career documents automatically
 - Eliminates duplicates and consolidates variations
 
 ### 🎯 **Smart Targeting**
+
 - Analyzes job descriptions to emphasize relevant experience
 - Generates custom resumes highlighting matching skills
 - Creates compelling cover letters with company research
 - Adapts messaging for different role types and seniority levels
 
 ### 💼 **Professional Optimization**
+
 - Executive-level resume formatting and structure
 - LinkedIn profile variations for different career strategies
 - Achievement quantification and impact measurement
 - Skills evolution tracking and technology progression
 
 ### 🔧 **Production Ready**
+
 - Robust error handling and recovery mechanisms
 - Progress tracking and resumable processing
 - Duplicate detection and intelligent consolidation
@@ -53,11 +59,13 @@
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - VSCode with [Cline extension](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
 - Claude API key from [Anthropic](https://console.anthropic.com/)
 - Python 3.8+ (for enhanced features)
 
 ### 1. Setup
+
 ```bash
 # Create your repository on GitHub first (see getting started guide)
 
@@ -74,6 +82,7 @@ cp ~/Documents/CoverLetters/* mydocs/
 ```
 
 ### 2. Process Your Documents
+
 ```bash
 # Open in VSCode
 code .
@@ -87,11 +96,13 @@ code .
 ```
 
 ### 3. Interactive Cleanup
+
 - Upload `DETAILED_SUMMARY.json` to [Claude.ai](https://claude.ai)
 - Use **Prompt5** for interactive deduplication and optimization
 - Get your comprehensive career profile
 
 ### 4. Generate Targeted Applications
+
 ```bash
 # Add job opportunities to opportunities/ folder
 # Use Prompt6 for targeted resumes and cover letters
@@ -100,12 +111,14 @@ code .
 
 ## 📊 Example Results
 
-### Input: 
+### Input 
+
 - 47 resume files spanning 15 years
 - 23 cover letters for various positions
 - Scattered achievements and project descriptions
 
-### Output:
+### Output
+
 - **1 comprehensive career profile** with timeline analysis
 - **Targeted resume** emphasizing relevant experience (2 minutes)
 - **Custom cover letter** with company research (3 minutes)  
@@ -119,7 +132,7 @@ Resume Forge uses a modular prompt-based architecture:
 ```
 📂 prompts/
 ├── 🔍 Prompt_System_Verification.md     # Pre-flight checks
-├── 🏗️ Prompt1_Initial_Setup.md           # Document scanning & deduplication  
+├── 🏗️ Prompt1_Initial_Setup.md          # Document scanning & deduplication  
 ├── 📖 Prompt2_Comprehensive_Extraction.md # AI-powered data extraction
 ├── 🛡️ Prompt3_Quality_Enhancements.md    # Production features
 ├── 📊 Prompt4_Generate_Summary.md        # Data consolidation
@@ -150,12 +163,14 @@ resume-forge/
 ## 🎯 Use Cases
 
 ### For Job Seekers
+
 - **Career changers**: Highlight transferable skills across industries
 - **Senior professionals**: Showcase decades of experience strategically  
 - **Recent graduates**: Organize internships, projects, and academic work
 - **Freelancers**: Consolidate diverse client work and achievements
 
 ### For Career Professionals  
+
 - **Recruiters**: Help candidates organize and optimize their materials
 - **Career coaches**: Systematic approach to client career management
 - **HR professionals**: Standardize resume evaluation and comparison
@@ -164,17 +179,20 @@ resume-forge/
 ## 🔧 Advanced Features
 
 ### Token Limit Handling
+
 - Automatic chunked processing for large document collections
 - Graceful fallback to simplified extraction modes
 - Resumable processing with progress tracking
 
 ### Quality Assurance
+
 - Duplicate detection across different file formats
 - Timeline consistency validation
 - Achievement quantification verification
 - Skills standardization and categorization
 
 ### Extensibility
+
 - Add custom prompts for industry-specific optimization
 - Plugin architecture for different AI providers
 - Template system for various career stages and roles
@@ -192,11 +210,13 @@ resume-forge/
 We welcome contributions! Resume Forge thrives on community input.
 
 ### Quick Contributions
+
 - 🐛 **Bug reports**: Found an issue? [Open an issue](https://github.com/knightsri/resume-forge/issues)
 - 💡 **Feature requests**: Have an idea? [Start a discussion](https://github.com/knightsri/resume-forge/discussions)
 - 📝 **Documentation**: Improve our docs with PRs
 
 ### Development Contributions
+
 - 🔧 **New prompts**: Add industry-specific or role-specific prompts
 - 🎯 **Enhanced targeting**: Improve job description analysis
 - 🤖 **AI improvements**: Better extraction and consolidation logic
@@ -207,24 +227,28 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 ## 📈 Roadmap
 
 ### v1.0 - Core Functionality ✅
+
 - [x] Document processing and extraction
 - [x] Interactive cleanup and optimization  
 - [x] Targeted resume and cover letter generation
 - [x] LinkedIn profile optimization
 
 ### v1.1 - Enhanced Features 🚧
+
 - [ ] Web interface for non-technical users
 - [ ] Integration with popular job boards
 - [ ] Real-time collaboration for career coaches
 - [ ] Advanced analytics and career insights
 
 ### v1.2 - Enterprise Features 🔄
+
 - [ ] Team/organization deployment
 - [ ] SSO and enterprise security
 - [ ] Bulk processing and management
 - [ ] Custom branding and templates
 
 ### v2.0 - AI Evolution 🌟
+
 - [ ] Multi-modal document analysis (images, videos)
 - [ ] Interview preparation and practice
 - [ ] Salary negotiation insights
@@ -242,7 +266,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 - **💬 Discussions**: [GitHub Discussions](https://github.com/knightsri/resume-forge/discussions)
 - **🐛 Issues**: [GitHub Issues](https://github.com/knightsri/resume-forge/issues)  
-- **📧 Email**: resume-forge@yourorg.com
+- **📧 Email**: <resume-forge@yourorg.com>
 - **🐦 Twitter**: [@ResumeForge](https://twitter.com/ResumeForge)
 
 ## 📄 License
